@@ -1,0 +1,31 @@
+{
+    "name": "unicodeveloper/laravel-ngsc",
+    "description": "A Laravel 5 Package for providing a fluent API for states and cities in Nigeria
+",
+    "keywords": ["github", "laravel","Open Source","states", "cities", "ngsc", "nigeria"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "unicodeveloper",
+        "email": "prosperotemuyiwa@gmail.com"
+      }
+   ],
+   "minimum-stability": "stable",
+   "require": {
+    "php": ">=5.5.9",
+    "illuminate/support": "5.2.*"
+   },
+   "autoload": {
+        "psr-4": {
+          "Unicodeveloper\\Ngsc\\": "src/"
+        }
+   },
+   "autoload-dev": {
+        "psr-4": {
+            "Unicodeveloper\\Ngsc\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
