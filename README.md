@@ -21,7 +21,7 @@ To get the latest version of Laravel Ngsc, simply add the following line to the 
 
 You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
 
-Once Laravel Identify is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
+Once Laravel Ngsc is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
 * `Unicodeveloper\Ngsc\NgscServiceProvider::class`
 
@@ -43,11 +43,79 @@ To get started, you'll need to publish all vendor assets:
 $ php artisan vendor:publish --provider="Unicodeveloper\Ngsc\NgscServiceProvider"
 ```
 
+## Usage
+
+You can use it in your controller by using Dependency Injection like so:
+
+```php
+<?php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use Unicodeveloper\Ngsc\Ngsc;
+use App\Http\Controllers\Controller;
+
+class StateController extends Controller
+{
+    protected $ngsc;
+
+    public function __construct(Ngsc $ngsc)
+    {
+        $this->ngsc = $ngsc;
+    }
+
+    /**
+     * Get all states
+     * @return array
+     */
+    public function getAllStates()
+    {
+        return $this->ngsc->getAllStates();
+    }
+}
+```
+
+You can also simply use the awesome Facades like so:
+
+```php
+
+/**
+ * Gets all the states in Nigeria
+ * @return array
+ */
+Ngsc::getAllStates()
+
+/**
+ * Gets the details of just one state, e.g capital, lat, lng
+ * @param string  state or state code
+ * @return array
+ */
+Ngsc::getOneState('lagos') OR Ngsc::getOneState('LA')
+
+/**
+ * Gets the local government areas of just one state
+ * @param string  state or state code
+ * @return array
+ */
+Ngsc::getLGAS('lagos') OR Ngsc::getLGAS('LA')
+
+/**
+ * Gets the cities of just one state
+ * @param string  state or state code
+ * @return array
+ */
+Ngsc::getCities('lagos') OR Ngsc::getCities('LA')
+```
+
+## Appreciation
+
+Huge thanks go to the [Devcenter.co](http://devcenter.co) crew for providing a fluent and awesome API
 
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
-
 
 ## How can I thank you?
 

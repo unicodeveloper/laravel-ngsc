@@ -17,12 +17,12 @@ class Ngsc {
      * @var object
      */
     protected $response;
+
     /**
      * Devcenter States and Cities API
      * Source: http://states-cities.devcenter.co/
      * @var string
      */
-
     protected $baseUrl = 'http://states-cities.devcenter.co/api/v1';
 
     public function __construct()
