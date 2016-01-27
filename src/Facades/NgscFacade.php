@@ -1,6 +1,6 @@
 <?php
 
-namespace Unicodeveloper\Ngsc;
+namespace Unicodeveloper\Ngsc\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
