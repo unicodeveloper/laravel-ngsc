@@ -7,7 +7,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-ngsc.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-ngsc)
 [![Total Downloads](https://img.shields.io/packagist/dt/unicodeveloper/laravel-ngsc.svg?style=flat-square)](https://packagist.org/packages/unicodeveloper/laravel-ngsc)
 
-> Laravel 5 Package to get states and cities in Nigeria
+> A Laravel 5 Package for providing a fluent API for states, lgas and cities in Nigeria
 
 ## Installation
 
