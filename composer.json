@@ -1,7 +1,6 @@
 {
     "name": "unicodeveloper/laravel-ngsc",
-    "description": "A Laravel 5 Package for providing a fluent API for states, lgas and cities in Nigeria
-",
+    "description": "A Laravel 5 Package for providing a fluent API for states, lgas and cities in Nigeria",
     "keywords": ["php","github", "laravel","Open Source","states", "cities", "ngsc", "nigeria", "unicodeveloper","laravel-ngsc"],
     "license": "MIT",
     "authors": [
